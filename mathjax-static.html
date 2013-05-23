@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="mathjax.css" rel="stylesheet">
+    <!--
+      Supported LaTeX commands:
+        http://docs.mathjax.org/en/latest/tex.html
+
+      The tex2jax Preprocessor:
+        http://docs.mathjax.org/en/latest/options/tex2jax.html
+        http://docs.mathjax.org/en/latest/config-files.html#the-tex-ams-html-configuration-file
+        http://docs.mathjax.org/en/latest/options/index.html
+    -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        displayAlign: "left",
+        displayIndent: "2em",
+
+        TeX: {
+          extensions: ["color.js"],
+          Macros: {
+            MM: '{\\bf M}',
+            bold: ['{\\bf #1}',1]
+          }
+        },
+
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          balanceBraces: true,
+          processEscapes: true,
+          processEnvironments: true
+        },
+
+        "HTML-CSS": {
+          preferredFont: "STIX",
+          styles: {
+            ".MathJax_Display": {
+              "background-color": "#F0F0D8",
+              padding: ".5em 0"
+            },
+            ".MathJax": {
+              color: "#541F14",
+            }
+          }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <title>MathJax Static</title>
+  </head>
+
+  <body>
+
+    <h1>MathJax Static</h1>
+
+    $$\sum_{i=1}^{n} i = \bbox[#86C543,0.25em]{{n(n+1)\over 2}}$$
+
+    $$\left[\matrix{1&amp;2&amp;3\cr4&amp;5&amp;6\cr7&amp;8&amp;9\cr}\right]$$
+
+    $${(n_1+n_2+\cdots+n_m)!\over n_1!\,n_2!\ldots n_m!}
+      ={n_1+n_2\choose n_2}
+      \ldots{n_1+n_2+\cdots+n_m\choose n_m}
+    $$
+
+    $$\{\underbrace{\overbrace{\mathstrut a,\ldots,a}^{k\;a'\rm s},
+      \overbrace{\mathstrut b,\ldots,b}^{l\;b'\rm s}\>}_{k+1\rm\;elements}\}
+    $$
+
+    $$\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+x}}}}}}}$$
+
+    $$\delta\colon {\Bbb R}^3 \to {\Bbb R}$$
+
+    $$\MM = \pmatrix{\pmatrix{a&amp;b\cr c&amp;d} &amp; \pmatrix{e&amp;f\cr g&amp;h}\cr
+      \bbox[#B2D1E5,1em]{\bold{0}}&amp;\pmatrix{i&amp;j\cr k&amp;l}}
+    $$
+
+  </body>
+</html>
