@@ -1,0 +1,4 @@
+## MatJax Templates
+
+* static
+* dynamic
