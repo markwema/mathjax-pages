@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      displayAlign: "left",
+
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']]
+      }
+    });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <script>
+    $(function() {
+       function makePreview(event) {
+         // console.log(event);
+
+         $('#preview').html($('#input').val().replace(/</g, "&lt;").replace(/>/g, "&gt;"));
+         MathJax.Hub.Queue(["Typeset", MathJax.Hub, "preview"]);
+       }
+       makePreview();
+       $('textarea').on("keyup", makePreview);
+    });
+    </script>
+
+    <link href="live.css" rel="stylesheet">
+    <title>Live Preview of MathJax Type Setting</title>
+  </head>
+
+  <body>
+    <textarea id="input" rows="10">$$\sin^2x + \cos^2x = 1$$</textarea>
+    <div id="preview"></div>
+  </body>
+
+</html>
